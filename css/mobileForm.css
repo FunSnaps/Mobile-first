@@ -1,0 +1,23 @@
+form>div{
+	margin-bottom:10px;
+	padding-bottom:5px;
+	border-bottom: 1px solid #ccc;
+}
+
+
+label {
+  display: block;
+}
+input[type="text"],
+input[type="email"],
+input[type="submit"],select,textarea {
+  box-sizing: border-box;
+  width: 90%;
+  margin:5px;
+  padding:10px;
+/*	ios zoom fix*/
+  font-size: 100%;
+}
+div.inlineLabels > label{
+	display: inline;
+}

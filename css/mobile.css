@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", helvetica, arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100%;
+  min-width: 320px;
+}
+header {
+  display: flex;
+  flex-wrap: wrap;
+}
+.logo {
+  /*  Don't set flex-basis as wrap will overule it just set to grow and shrink */
+    flex:1 1;
+  }
+  .logo img {
+    max-width: 400px;
+    padding: 5px;
+  }
+  .loginLinks {
+    /*  Don't set flex-basis as wrap will overule it just stop grow and shrink */
+    flex:0 0;
+  }
+  .burgerMenu {
+    /*  Don't set flex-basis as wrap will overule it just stop grow and shrink*/
+    flex:0 0;
+    padding: 13px 11px 0 11px;
+  }
+  .search {
+    flex-basis: 100%;  
+  }
+.search > form {
+  display: flex;
+}
+input[type="search"] {
+  flex-basis: 80%;
+  padding: 12px 5px;
+  border: 1px solid #ccc;
+  border-right: none;
+  -webkit-appearance: none;
+}
+button[type="submit"] {
+  flex-basis: 20%;
+  background-color: #4caf50;
+  border: none;
+  color: #fff;
+}
+.loginLinks > ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.loginLinks > ul > li {
+  border: 1px solid #000;
+}
+.loginLinks > ul > li:first-child {
+  margin-right: 4px;
+}
+.loginLinks > ul > li > a {
+  padding: 4px 2px;
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+}
+
+.mainNav {
+  background-color: #8d965b;
+  display:none;
+}
+.mainNav ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainNav ul li {
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+}
+
+.mainNav ul li a {
+  display: inline-block;
+  width: 100%;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 0;
+}
+.slideMenu {
+  transition: height 0.3s ease-in;
+  height: 300px;
+}
+img {
+  width: 100%;
+}
+.mainContent {
+  margin: 0 10px;
+}
+.bars {
+  float: right;
+  cursor: pointer;
+}
+.bar1,
+.bar2,
+.bar3 {
+  width: 24px;
+  height: 4px;
+  margin: 6px 0;
+  background-color: #000;
+  transition: 0.4s;
+}
+
+.animateBurger .bar2 {
+  opacity: 0;
+}
+
+/* Rotate first bar */
+.animateBurger .bar1 {
+  transform: rotate(-45deg) translate(-6px, 8px);
+}
+
+/* Fade out the second bar */
+.animateBurger .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.animateBurger .bar3 {
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+/* Experiment two columns */
+.news {
+  display: flex;
+  flex-wrap: wrap;
+}
+.newsItem {
+  flex-basis: 50%;
+  padding: 0 10px;
+}
+footer {
+  background-color: #011424;
+  color: #fff;
+  padding: 0 10px;
+}
+footer .row {
+  display: flex;
+  flex-direction: column;
+}
+footer .row address {
+  padding: 15px 0 5px 5px;
+}
+.footerSocialLinks {
+  flex-basis: 20%;
+}
+.footerSocialLinks ul {
+  display: flex;
+  list-style: none;
+  padding-left: 5px;
+}
+.footerSocialLinks ul li {
+  flex-basis: 40px;
+}
+.footerSocialLinks ul li a i {
+  color: #fff;
+  font-size: 1.4rem;
+}
+.footerLinks {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  flex-wrap: wrap;
+}
+.footerLinks li {
+  border-right: 1px solid #ccc;
+}
+.footerLinks li:last-child {
+  border-right: none;
+}
+.footerLinks li a {
+  font-size: 0.8rem;
+  width: 100%;
+  display: inline-block;
+  padding: 2px 5px;
+  text-decoration: none;
+  color: #fff;
+}
+.footerLinks li a:hover {
+  text-decoration: underline;
+}
